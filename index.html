@@ -909,8 +909,10 @@
           if (h > 18)
             document.querySelector("img").src = "source/media/wp2.png";
           else if (h > 4)
-            document.querySelector("img").src = "source/media/download.jpg";
-          else document.querySelector("img").src = "source/media/wp2.png";
+            document.querySelector("img").src = "source/media/wp2.png";
+          else
+            document.querySelector("img").src =
+              "source/media/upscalemedia-transformed.jpeg";
         }
         if (window.btoa($(".cc").text()) != "TWFkZSBXaXRoIOKdpO+4jw==") {
           if (jalan) $(".container").remove();
