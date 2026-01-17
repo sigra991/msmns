@@ -5,7 +5,7 @@
  t.me/SharingUserbot & t.me/Lunatic0de
 
 -->
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Somebody to You</title>
@@ -621,11 +621,11 @@
         startY = e.clientY;
         startWidth = parseInt(
           document.defaultView.getComputedStyle(mywindow).width,
-          10
+          10,
         );
         startHeight = parseInt(
           document.defaultView.getComputedStyle(mywindow).height,
-          10
+          10,
         );
         document.documentElement.addEventListener("mousemove", doDrag, false);
         document.documentElement.addEventListener("mouseup", stopDrag, false);
@@ -641,12 +641,12 @@
         document.documentElement.removeEventListener(
           "mousemove",
           doDrag,
-          false
+          false,
         );
         document.documentElement.removeEventListener(
           "mouseup",
           stopDrag,
-          false
+          false,
         );
         animasi();
       }
@@ -790,7 +790,7 @@
         $("#nama").append(
           "<input type='text' id='textnama' value='" +
             nama +
-            "' style='background:#00000000; color:#FFF; outline: none; box-sizing:border-box; border: 0px solid #000;' placeholder='nama' autofocus></input><span id='oke' style='transition: all ease 0.3s; border-radius:5px; width:30px; height:25px; margin-top:2.5px; line-height:25px; position:absolute; right:3px;' onclick='gantinamaok()'>oke</span>"
+            "' style='background:#00000000; color:#FFF; outline: none; box-sizing:border-box; border: 0px solid #000;' placeholder='nama' autofocus></input><span id='oke' style='transition: all ease 0.3s; border-radius:5px; width:30px; height:25px; margin-top:2.5px; line-height:25px; position:absolute; right:3px;' onclick='gantinamaok()'>oke</span>",
         );
         textnama = document.querySelector("#textnama");
         textnama.autofocus = true;
@@ -811,7 +811,7 @@
         $("#nama").append(
           '<span id="spannama3" onclick="gantinama()">' +
             localStorage.getItem("nama") +
-            "</span>"
+            "</span>",
         );
       }
       cari = true;
@@ -823,7 +823,7 @@
           $(".ucapan").text("");
           $(".ucapan *").remove();
           $(".ucapan").append(
-            "<input type='text' id='textcari' style='background:#00000000; width:300px; transform:translateX(-70px); color:#000; outline: none; box-sizing:border-box; border: 0px solid #000; font-size:20px' placeholder='Cari di sini' autofocus></input><span class='tombolcari'; style='transition: all ease 0.3s; border-radius:10px; width:60px; height:50px; top:calc(50% - 25px); right:90px; line-height:50px; position:absolute;' onclick='cariok()'>Cari</span><span class='tombolcari'; style='transition: all ease 0.3s; border-radius:10px; width:60px; height:50px; top:calc(50% - 25px); right:20px; line-height:50px; position:absolute;' onclick='caribatal()'>Batal</span>"
+            "<input type='text' id='textcari' style='background:#00000000; width:300px; transform:translateX(-70px); color:#000; outline: none; box-sizing:border-box; border: 0px solid #000; font-size:20px' placeholder='Cari di sini' autofocus></input><span class='tombolcari'; style='transition: all ease 0.3s; border-radius:10px; width:60px; height:50px; top:calc(50% - 25px); right:90px; line-height:50px; position:absolute;' onclick='cariok()'>Cari</span><span class='tombolcari'; style='transition: all ease 0.3s; border-radius:10px; width:60px; height:50px; top:calc(50% - 25px); right:20px; line-height:50px; position:absolute;' onclick='caribatal()'>Batal</span>",
           );
           document
             .querySelector("#textcari")
@@ -907,9 +907,11 @@
           else if (h > 4) tulis("pagi", "selamat beraktivitas");
           else tulis("malam", "seharusnya kamu sudah tidur");
           if (h > 18)
-            document.querySelector("img").src = "source/media/wp2.png";
+            document.querySelector("img").src =
+              "source/media/upscalemedia-transformed.jpeg";
           else if (h > 4)
-            document.querySelector("img").src = "source/media/wp2.png";
+            document.querySelector("img").src =
+              "source/media/upscalemedia-transformed.jpeg";
           else
             document.querySelector("img").src =
               "source/media/upscalemedia-transformed.jpeg";
@@ -928,7 +930,7 @@
             localStorage.getItem("nama") +
             ", " +
             ucapan +
-            "."
+            ".",
         );
       }
       function checkTime(i) {
